@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1027147869074",
+    "project_id": "nelson-c2230",
+    "storage_bucket": "nelson-c2230.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1027147869074:android:d639eb586c83387eb1af4b",
+        "android_client_info": {
+          "package_name": "com.example.nelson_firebase_auth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1027147869074-oedas1vapfa4ihe80jaokrgha4i34rdk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChAVm_wadzbNhJ7lG1kb99eeeQ_AG6iAg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1027147869074-oedas1vapfa4ihe80jaokrgha4i34rdk.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1027147869074-24huq2hhq4etb59hj7a4ecslv8atr1kn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.nelsonchung.nelsonFirebaseAuth"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

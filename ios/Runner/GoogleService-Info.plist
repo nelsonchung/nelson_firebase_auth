@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1027147869074-24huq2hhq4etb59hj7a4ecslv8atr1kn.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1027147869074-24huq2hhq4etb59hj7a4ecslv8atr1kn</string>
+	<key>API_KEY</key>
+	<string>AIzaSyA5LfP_5RsYigfO9IxfGjQaO252X-e7lfA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1027147869074</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.nelsonchung.nelsonFirebaseAuth</string>
+	<key>PROJECT_ID</key>
+	<string>nelson-c2230</string>
+	<key>STORAGE_BUCKET</key>
+	<string>nelson-c2230.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1027147869074:ios:b22a888e5e82f88eb1af4b</string>
+</dict>
+</plist>
