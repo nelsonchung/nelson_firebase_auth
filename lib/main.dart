@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'firebase_options.dart';
 import 'package:logger/logger.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+  await Firebase.initializeApp();
   runApp(MaterialApp(
     title: '使用者登入',
     home: LoginPage(),
@@ -23,6 +20,11 @@ class LoginPage extends StatelessWidget {
 
   LoginPage({Key? key}) : super(key: key);
 
+  void _showSnackBar(BuildContext context, String message) {
+    ScaffoldMessenger.of(context)
+        .showSnackBar(SnackBar(content: Text(message)));
+  }
+
   Future<void> signInWithEmailAndPassword(BuildContext context) async {
     try {
       UserCredential userCredential =
@@ -32,18 +34,30 @@ class LoginPage extends StatelessWidget {
       );
       // 登入成功後的處理邏輯
       logger.i('使用者登入成功：${userCredential.user!.uid}');
+      // ignore: use_build_context_synchronously
+      _showSnackBar(context, '使用者登入成功');
     } catch (e) {
       // 登入失敗的處理邏輯
       logger.e('使用者登入失敗：$e');
+      _showSnackBar(context, '使用者登入失敗');
     }
   }
 
-  Future<void> sendEmailVerification(BuildContext context) async {
-    User? user = FirebaseAuth.instance.currentUser;
-    if (user != null && !user.emailVerified) {
-      await user.sendEmailVerification();
-      // 寄送驗證郵件後的處理邏輯
-      logger.i('已寄送驗證郵件至使用者的信箱');
+  Future<void> registerWithEmailAndPassword(BuildContext context) async {
+    try {
+      UserCredential userCredential =
+          await FirebaseAuth.instance.createUserWithEmailAndPassword(
+        email: emailController.text,
+        password: passwordController.text,
+      );
+      // 註冊成功後的處理邏輯
+      logger.i('使用者註冊成功：${userCredential.user!.uid}');
+      // ignore: use_build_context_synchronously
+      _showSnackBar(context, '使用者註冊成功');
+    } catch (e) {
+      // 註冊失敗的處理邏輯
+      logger.e('使用者註冊失敗：$e');
+      _showSnackBar(context, '使用者註冊失敗');
     }
   }
 
@@ -96,9 +110,9 @@ class LoginPage extends StatelessWidget {
               const SizedBox(height: 10.0),
               ElevatedButton(
                 onPressed: () {
-                  sendEmailVerification(context);
+                  registerWithEmailAndPassword(context);
                 },
-                child: const Text('寄送驗證郵件'),
+                child: const Text('註冊'),
               ),
             ],
           ),

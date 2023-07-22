@@ -67,7 +67,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '1027147869074',
     projectId: 'nelson-c2230',
     storageBucket: 'nelson-c2230.appspot.com',
-    iosClientId: '1027147869074-24huq2hhq4etb59hj7a4ecslv8atr1kn.apps.googleusercontent.com',
+    iosClientId:
+        '1027147869074-24huq2hhq4etb59hj7a4ecslv8atr1kn.apps.googleusercontent.com',
     iosBundleId: 'com.nelsonchung.nelsonFirebaseAuth',
   );
 
@@ -77,7 +78,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '1027147869074',
     projectId: 'nelson-c2230',
     storageBucket: 'nelson-c2230.appspot.com',
-    iosClientId: '1027147869074-b284ei3hk21cr5iebicb0ku4f9nfbtvi.apps.googleusercontent.com',
+    iosClientId:
+        '1027147869074-b284ei3hk21cr5iebicb0ku4f9nfbtvi.apps.googleusercontent.com',
     iosBundleId: 'com.example.nelsonFirebaseAuth.RunnerTests',
   );
 }
